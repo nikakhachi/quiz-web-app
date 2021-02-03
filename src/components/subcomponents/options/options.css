@@ -1,0 +1,92 @@
+#options-div .text {
+  font-size: 2vw;
+  margin-bottom: 4%;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.377);
+}
+
+#good-luck {
+  font-size: 1.7vw;
+  margin-top: 1%;
+}
+
+form {
+  margin-left: 1.5%;
+}
+
+#options-div label {
+  font-size: 1.5vw;
+  display: block;
+}
+#options-div select {
+  width: 50%;
+  margin: 2% 0 3.5% 0;
+  font-size: 1.1vw;
+  padding: 0.5% 0;
+  border-radius: 0.2vw;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.363);
+  cursor: pointer;
+  background-color: white;
+}
+
+#options-div button {
+  display: block;
+  background-color: #0f9d58;
+  color: white;
+  outline: none;
+  border: none;
+  width: 22%;
+  font-size: 1.3vw;
+  padding: 0.6%;
+  cursor: pointer;
+  margin: 5% 0 5% 0.1%;
+}
+
+@media (max-width: 1024px) {
+  #options-div .text {
+    font-size: 4.5vw;
+  }
+  #good-luck {
+    font-size: 4vw;
+    margin-bottom: 3%;
+  }
+  #options-div label {
+    font-size: 4vw;
+  }
+  #options-div select {
+    font-size: 2.5vw;
+    padding: 2% 0;
+    width: 100%;
+    margin-bottom: 7%;
+  }
+  #options-div button {
+    position: absolute;
+    left: 15%;
+    bottom: 10%;
+    width: 70%;
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 500px) {
+  #options-div .text {
+    font-size: 5.9vw;
+    margin-bottom: 7%;
+  }
+  #good-luck {
+    font-size: 5.5vw;
+  }
+  #options-div label {
+    font-size: 5vw;
+  }
+  #options-div select {
+    font-size: 4vw;
+  }
+  #options-div button {
+    width: 90%;
+    font-size: 6.5vw;
+    margin-top: 50%;
+    padding: 2%;
+    left: 5%;
+  }
+}
