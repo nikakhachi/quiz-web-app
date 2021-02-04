@@ -19,6 +19,7 @@ function Data(props) {
         setData(data2);
     }
         getData();
+        console.log(props.category, props.difficulty);
     }, [props]);
 
     return(
