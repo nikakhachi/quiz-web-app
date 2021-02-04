@@ -49,6 +49,7 @@ form {
 #no-questions {
   margin-bottom: 0%;
   text-decoration: underline;
+  font-size: 1.1vw;
 }
 
 @media (max-width: 1024px) {
