@@ -32,6 +32,9 @@ function QuizForm(){
         
         //This text will be displayed in Options component, if no question were found in selected difficulty and category
         setnotFoundText('No questions were found. Please choose another Category/Difficulty.');
+
+        setDifficulty('');
+        setCategory('');
     }
 
     return(
