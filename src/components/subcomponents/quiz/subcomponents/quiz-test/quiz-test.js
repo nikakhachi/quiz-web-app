@@ -9,6 +9,7 @@ function QuizTest(props){
     
     const [num, setNum] = useState(0);
 
+    // If questions are left to be answered, it takes all possibly answers, mixes them up and positioning them in random positions.
     if(num !== 10){
         question = props.data.results[num].question;
         let answers = [...props.data.results[num]['incorrect_answers'], props.data.results[num]['correct_answer']];
@@ -19,12 +20,11 @@ function QuizTest(props){
             newArray.push(answersCopy[randomNum])
             answersCopy.splice(randomNum, 1);
         }
-        console.log(newArray);
     }
 
     return(
         <div>
-            {num !== 10 ? <Question num={num} question={question} answers={newArray} next={() => setNum(num + 1)}/> : <Result />}
+            {num !== 10 ? <Question num={num} question={question} answers={newArray} next={() => setNum(num + 1)}/> : <Result anotherTest={props.anotherTest} tryAgain={() => setNum(0)}/>}
         </div>
     )
 }

@@ -23,7 +23,7 @@ function Data(props) {
     }, [props]);
 
     return(
-        data.length === 0 ? <Loading /> : <QuizTest data={data}/>
+        data.length === 0 ? <Loading /> : <QuizTest data={data} anotherTest={props.anotherTest}/>
     )
 }
 

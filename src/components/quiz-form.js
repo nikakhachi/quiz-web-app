@@ -18,13 +18,16 @@ function QuizForm(){
         e.preventDefault();
         setStart(true);
     }
+    function anotherTest(){
+        setStart(false);
+    }
 
     return(
         <div>
             {!start ? <Options selectCategory={selectCategory} 
                                selectDifficulty={selectDifficulty} 
                                start={startQuiz} /> 
-                    : <GetData category={category} difficulty={difficulty}/>}
+                    : <GetData category={category} difficulty={difficulty} anotherTest={anotherTest}/>}
         </div>
     )
 }

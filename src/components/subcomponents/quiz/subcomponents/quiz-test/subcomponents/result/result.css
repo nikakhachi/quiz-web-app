@@ -1,0 +1,69 @@
+#result-div {
+  text-align: center;
+  animation: fadeIn 1s;
+}
+#result-title {
+  font-size: 4vw;
+}
+#result-score {
+  border: 1px solid gray;
+  border-radius: 50%;
+  width: 20%;
+  padding: 3.5% 0;
+  font-size: 4vw;
+  margin: 2% auto 2% auto;
+}
+#result-text {
+  font-size: 2.5vw;
+  margin-bottom: 3%;
+}
+
+#result-div button {
+  font-size: 1.5vw;
+  display: block;
+  margin: auto;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #0f9d58;
+  margin-bottom: 2%;
+  padding: 0.5% 2%;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  #result-title {
+    font-size: 8vw;
+    margin-top: 5%;
+  }
+  #result-score {
+    font-size: 8vw;
+    width: 30%;
+    padding: 5.5% 0;
+  }
+  #result-text {
+    font-size: 4.5vw;
+  }
+  #result-div button {
+    font-size: 4vw;
+    margin-top: 6%;
+  }
+}
+
+@media (max-width: 500px) {
+  #result-title {
+    font-size: 12vw;
+  }
+  #result-score {
+    font-size: 12vw;
+    width: 40%;
+    padding: 8% 0;
+  }
+  #result-text {
+    font-size: 6.5vw;
+  }
+  #result-div button {
+    font-size: 7vw;
+    margin-top: 10%;
+  }
+}

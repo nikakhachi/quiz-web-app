@@ -7,7 +7,7 @@ function Question(props){
             <p id='question'>{props.question}</p>
             <ul id='answers'>
                 {props.answers.map((item, index) => (
-                    <li key={index} onClick={(e) => console.log(e.target.innerText)}>{item}</li>
+                    <li key={index}>{item}</li>
                 ))}
             </ul>
             <button onClick={props.next} id='next-btn'>Next</button>   

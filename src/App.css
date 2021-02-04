@@ -12,7 +12,7 @@ body {
 
 #main-container {
   width: 60vw;
-  height: 80vh;
+  min-height: 80vh;
   background-color: white;
   margin: 3% auto 0 auto;
   display: grid;
@@ -42,8 +42,7 @@ body {
 @media (max-width: 1024px) {
   #main-container {
     width: 80vw;
-    height: auto;
-    min-height: 95vh;
+    padding-bottom: 15%;
   }
 }
 
