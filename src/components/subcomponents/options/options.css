@@ -73,6 +73,9 @@ form {
     margin-top: 20%;
     font-size: 4vw;
   }
+  #no-questions {
+    font-size: 3.2vw;
+  }
 }
 
 @media (max-width: 500px) {
@@ -92,8 +95,12 @@ form {
   #options-div button {
     width: 100%;
     font-size: 6.5vw;
-    margin-top: 50%;
+    margin-top: 20%;
     padding: 2%;
     left: 5%;
+  }
+  #no-questions {
+    margin-top: 2%;
+    font-size: 4.4vw;
   }
 }
