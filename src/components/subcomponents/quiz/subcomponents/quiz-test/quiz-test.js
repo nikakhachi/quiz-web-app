@@ -1,4 +1,3 @@
-import './quiz-test.css';
 import { useState } from 'react';
 import Question from './subcomponents/questions/question';
 import Result from './subcomponents/result/result';
@@ -7,9 +6,14 @@ let question; let newArray;
 
 function QuizTest(props){
     
+    // Num variable is corresponding to the question index in the array.
     const [num, setNum] = useState(0);
 
+    // This variable counts the answers that suer has correct, which will be displayed in the end.
+    const [score, setScore] = useState(0);
+
     // If questions are left to be answered, it takes all possibly answers, mixes them up and positioning them in random positions.
+    // If not, user will be redirected to the results page.
     if(num !== 10){
         question = props.data.results[num].question;
         let answers = [...props.data.results[num]['incorrect_answers'], props.data.results[num]['correct_answer']];
@@ -22,9 +26,32 @@ function QuizTest(props){
         }
     }
 
+    function nextQuestion(){
+        setNum(num + 1);
+    }
+
+    function answer(e){
+        if(e.target.innerText === props.data.results[num]['correct_answer']){
+            setScore(score + 1);
+            setNum(num + 1);
+        }else{
+            setNum(num + 1);
+        }
+    }
+
     return(
         <div>
-            {num !== 10 ? <Question num={num} question={question} answers={newArray} next={() => setNum(num + 1)}/> : <Result anotherTest={props.anotherTest} tryAgain={() => setNum(0)}/>}
+            {num !== 10 ? <Question answer={answer}
+                                    num={num} 
+                                    question={question} 
+                                    answers={newArray} 
+                                    next={nextQuestion}/> 
+                        : <Result anotherTest={props.anotherTest} 
+                                  tryAgain={() => {
+                                      setNum(0);
+                                      setScore(0);
+                                  }}
+                                  score={score}/>}
         </div>
     )
 }

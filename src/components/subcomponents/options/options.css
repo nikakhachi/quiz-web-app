@@ -46,6 +46,11 @@ form {
   margin: 5% 0 5% 0.1%;
 }
 
+#no-questions {
+  margin-bottom: 0%;
+  text-decoration: underline;
+}
+
 @media (max-width: 1024px) {
   #options-div .text {
     font-size: 4.5vw;

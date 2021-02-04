@@ -43,6 +43,7 @@ function Options(props){
                     <option value="medium">Medium</option>
                     <option value="hard">Hard</option>
                 </select>
+                <div id='no-questions'>{props.errorText}</div>
                 <button onClick={props.start}>Start Quiz</button>
             </form>
         </div>

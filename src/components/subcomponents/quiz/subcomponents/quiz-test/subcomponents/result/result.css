@@ -42,11 +42,14 @@
     padding: 5.5% 0;
   }
   #result-text {
-    font-size: 4.5vw;
+    font-size: 4.7vw;
+    margin-bottom: 10%;
+    margin-top: 5%;
   }
   #result-div button {
     font-size: 4vw;
     margin-top: 6%;
+    padding: 0.5% 5%;
   }
 }
 
@@ -61,9 +64,10 @@
   }
   #result-text {
     font-size: 6.5vw;
+    margin-bottom: 17%;
   }
   #result-div button {
-    font-size: 7vw;
+    font-size: 6.6vw;
     margin-top: 10%;
   }
 }
