@@ -61,6 +61,7 @@ function QuizTest(props){
                                                 tryAgain={() => {
                                                   setNum(0);
                                                   setScore(0);
+                                                  setAnimate(false);
                                                 }}
                                                 score={score}/>}
         </div>
