@@ -2,7 +2,7 @@ fieldset {
   border: 1px solid gray;
   padding: 3%;
   margin-top: 3%;
-  animation: fadeIn 1s;
+  animation: fadeIn 0.5s;
 }
 
 legend {

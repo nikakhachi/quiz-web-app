@@ -5,6 +5,9 @@ import Result from './subcomponents/result/result';
 let question; let newArray;
 
 function QuizTest(props){
+
+    // by help of this variable, on each new question, the components has fade in effect. 
+    const [animate, setAnimate] = useState(true); 
     
     // Num variable is corresponding to the question index in the array.
     const [num, setNum] = useState(0);
@@ -28,20 +31,24 @@ function QuizTest(props){
 
     function nextQuestion(){
         setNum(num + 1);
+
+        setAnimate(false);
+        setTimeout( ()=>{ setAnimate(true) }, 1);
     }
 
     function answer(e){
         if(e.target.innerText === props.data[num]['correct_answer']){
             setScore(score + 1);
-            setNum(num + 1);
-        }else{
-            setNum(num + 1);
         }
+        setNum(num + 1);
+
+        setAnimate(false);
+        setTimeout( ()=>{ setAnimate(true) }, 1);
     }
 
     return(
         <div>
-            {num !== 10 ? <Question answer={answer}
+            {!animate ? <div></div> : num !== 10 && animate ? <Question answer={answer}
                                     num={num} 
                                     question={question} 
                                     answers={newArray} 
