@@ -48,17 +48,18 @@ function QuizTest(props){
 
     return(
         <div>
-            {!animate ? <div></div> : num !== 10 && animate ? <Question answer={answer}
-                                    num={num} 
-                                    question={question} 
-                                    answers={newArray} 
-                                    next={nextQuestion}/> 
-                        : <Result anotherTest={props.anotherTest} 
-                                  tryAgain={() => {
-                                      setNum(0);
-                                      setScore(0);
-                                  }}
-                                  score={score}/>}
+            {!animate ? <div></div> 
+             : num !== 10 && animate ? <Question answer={answer}
+                                                num={num} 
+                                                question={question} 
+                                                answers={newArray} 
+                                                next={nextQuestion}/> 
+                                    : <Result anotherTest={props.anotherTest} 
+                                                tryAgain={() => {
+                                                  setNum(0);
+                                                  setScore(0);
+                                                }}
+                                                score={score}/>}
         </div>
     )
 }
