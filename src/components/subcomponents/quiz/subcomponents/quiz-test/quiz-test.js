@@ -15,13 +15,13 @@ function QuizTest(props){
     // If questions are left to be answered, it takes all possibly answers, mixes them up and positioning them in random positions.
     // If not, user will be redirected to the results page.
     if(num !== 10){
-        question = props.data.results[num].question;
-        let answers = [...props.data.results[num]['incorrect_answers'], props.data.results[num]['correct_answer']];
+        question = props.data[num].question;
+        let answers = [...props.data[num]['incorrect_answers'], props.data[num]['correct_answer']];
         let answersCopy = [...answers]
         newArray = [];
         for(let i = 0; i < answers.length; i++){
-            let randomNum = Math.floor(Math.random() * answersCopy.length)
-            newArray.push(answersCopy[randomNum])
+            let randomNum = Math.floor(Math.random() * answersCopy.length);
+            newArray.push(answersCopy[randomNum]);
             answersCopy.splice(randomNum, 1);
         }
     }
@@ -31,7 +31,7 @@ function QuizTest(props){
     }
 
     function answer(e){
-        if(e.target.innerText === props.data.results[num]['correct_answer']){
+        if(e.target.innerText === props.data[num]['correct_answer']){
             setScore(score + 1);
             setNum(num + 1);
         }else{

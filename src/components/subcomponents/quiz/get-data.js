@@ -21,7 +21,7 @@ function Data(props) {
 
         // Gets 10 questions of corresponding difficulty and category.
         // The amount of questions can be changed from the url. User can't to it.
-        const response2 = await fetch(`https://opentdb.com/api.php?amount=10&category=${id}&difficulty=${props.difficulty}`)
+        const response2 = await fetch(`https://opentdb.com/api.php?amount=10&category=${id}&difficulty=${props.difficulty}`);
         const data2 = await response2.json();
 
         // If no questions are found on corresponding difficulty and category...
@@ -30,9 +30,10 @@ function Data(props) {
         if(data2.results.length === 0){
             props.notFound();
         }else{
-            setData(data2);
+            setData(data2.results);
         }
     }
+        // Calling the function above
         getData();
     }, [props]);
 
